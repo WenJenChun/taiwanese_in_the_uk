@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body, nav, div, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  background-color: aquamarine;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */
