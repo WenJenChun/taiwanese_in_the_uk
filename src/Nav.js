@@ -7,7 +7,7 @@ import { PiHamburgerThin } from "react-icons/pi";
 const Nav = () => {
   return (
     <nav className='nav'>
-      <div class="bg-gray-100 font-sans w-full min-h-screen m-0">
+      <div class="bg-gray-100 font-sans w-full m-0">
         <div class="bg-white">
           <div class="container mx-auto px-4">
             <div class="flex  items-center justify-between py-4">
