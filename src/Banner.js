@@ -18,7 +18,7 @@ const Banner = ({src}) => {
     >
       <div className="text-center">
         <h1 className="mb-4 text-5xl tracking-wider">All Needs Have Solutions</h1>
-        <p className="mb-4 text-4xl font-normal tracking-widest">解 決 你 英 國 生 活 的 疑 難 雜 症</p>
+        <p className="mb-4 text-3xl font-normal tracking-wider">Solving the Puzzles of Your Life in the UK</p>
         <div className='flex justify-between'>
           <a href="" className='border-solid border rounded-sm border-white text-base font-thin px-3.5 py-0.5 hover:bg-rose-500'>London</a>
           <a href="" className='border-solid border rounded-sm border-white text-base font-thin px-3.5 py-0.5 hover:bg-rose-500'>Manchester</a>

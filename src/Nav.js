@@ -31,7 +31,7 @@ const Nav = () => {
               {/* sign in */}
               <div class="hidden sm:flex sm:items-center">
                 <a href="#" class="text-gray-800 text-sm font-semibold hover:text-teal-500 mr-4">Sign in</a>
-                <a href="#" class="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg text-teal-500 border-teal-500">Sign up</a>
+                <a href="#" class="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg text-teal-500 border-teal-500 hover:bg-teal-500 hover:text-white">Sign up</a>
               </div>
 
               {/* hamburger icon */}
