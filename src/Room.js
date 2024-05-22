@@ -5,7 +5,8 @@ import { LuPoundSterling } from "react-icons/lu";
 
 const Room = ({ imgSrc }) => {
   return (
-    <div className='w-56 m-3'>
+    
+    <div className='text-center w-80 sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4'>
       <img className="rounded-xl h-56 object-cover" src={imgSrc} alt="Modern building architecture" />
       <p className='font-bold py-1'>市中心乾淨明亮通風雙人房，...</p>
       <div className="flex justify-between text-sm">
@@ -14,8 +15,7 @@ const Room = ({ imgSrc }) => {
         <div><LuPoundSterling className=' inline' size={18}/><p className='pt-1 inline'>675 pcm</p></div>
       </div>
     </div>
-      
-    
+  
   );
 };
 
