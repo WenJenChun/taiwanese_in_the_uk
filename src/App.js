@@ -13,9 +13,10 @@ function App() {
      <Nav />
      <Banner src="images/banner.jpg" />
      <Search />
-     <div className="container mx-auto px-20 mt-5">
-      <h2 className="text-2xl px-3 text-left">Room Share</h2>
-      <div className="flex flex-wrap justify-start mt-5">
+     <div className="container mx-auto mt-5">
+      <div className="">
+         <h2 className="text-2xl text-center sm:text-left ">Room Share</h2>
+         <div className="flex flex-wrap justify-center md:justify-start mt-5">
          <Room imgSrc="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
          <Room imgSrc="https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=2292&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
          <Room imgSrc="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
@@ -23,9 +24,13 @@ function App() {
          <Room imgSrc="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
          <Room imgSrc="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
       </div>
-      <div className="text-right my-5">
+      <div className="text-center text-whiteOrange sm:text-right my-5">
       <SeeMore className="" pageTitle="房源"/>
       </div>
+      </div>
+      
+      
+      
       
      </div>
      

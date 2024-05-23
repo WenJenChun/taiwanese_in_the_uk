@@ -30,9 +30,9 @@ const Banner = ({ src }) => {
         style={{ minHeight: '400px' }}
       >
         <div className="text-center">
-          <h1 className="mb-4 text-5xl tracking-wider font-extrabold text-white">All Needs Have Solutions</h1>
-          <p className="mb-4 text-3xl font-bold tracking-wider text-white">Solving the Puzzles of Your Life in the UK</p>
-          <div className='flex justify-between'>
+          <h1 className="mb-4 text-3xl md:text-5xl tracking-wider font-extrabold text-white">All Needs Have Solutions</h1>
+          <p className="mb-4 text-lg md:text-2xl font-bold tracking-wider text-white">Solving the Puzzles of Your Life in the UK</p>
+          <div className='flex flex-wrap justify-center gap-2 mx-1'>
             <a href="" className='text-white border-solid border rounded-sm border-white text-base font-normal px-3.5 py-0.5 hover:bg-rose-500'>London</a>
             <a href="" className='text-white border-solid border rounded-sm border-white text-base font-normal px-3.5 py-0.5 hover:bg-rose-500'>Manchester</a>
             <a href="" className='text-white border-solid border rounded-sm border-white text-base font-normal px-3.5 py-0.5 hover:bg-rose-500'>Glasgow</a>
