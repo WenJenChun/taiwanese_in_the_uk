@@ -8,7 +8,7 @@ const Search = () => {
         <div className='bg-teal-500  py-10'>
             <div className="text-center text-white text-xl font-semibold">I'm looking for...</div>
             <form className="flex justify-center mt-2">    
-                <input type="text" className="w-4/12 bg-white text-gray-900 text-sm pl-2 py-3 focus:outline-none focus:ring-0" placeholder="rice cooker, house sharing, travel mates..."/>
+                <input type="text" className="w-8/12 md:w-6/12 lg:w-4/12 bg-white text-gray-900 text-sm pl-2 py-3 focus:outline-none focus:ring-0" placeholder="rice cooker, house sharing, travel mates..."/>
                 <button type="submit" className="rounded-sm bg-yellow-300 text-base font-thin px-3.5 hover:bg-rose-500">Search
                 </button>
             </form>

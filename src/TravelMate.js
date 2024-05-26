@@ -5,8 +5,8 @@ import { PiLineVerticalLight } from "react-icons/pi";
 
 const TravelMate = ({ imgSrc }) => {
   return (
-    <div className='w-56 m-3'>
-      <img className="rounded-xl h-56 object-cover" src={imgSrc} alt="Modern building architecture" />
+    <div className='w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4 px-2 mb-4'>
+      <img className="rounded-xl object-cover sm:h-56" src={imgSrc} alt="Modern building architecture" />
       <p className='font-bold py-1'>12/1~12/10 德國耶誕市集...</p>
       <div className="flex justify-between text-sm">
         <p>Jerry</p>
