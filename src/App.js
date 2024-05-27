@@ -5,6 +5,7 @@ import Room from "./Room"
 import Thing from "./Thing"
 import TravelMate from "./TravelMate"
 import SeeMore from "./SeeMore";
+import TextImage from "./TextImage"
 import TextBox from "./TextBox"
 // import Counter from "./Counter";
 
@@ -59,12 +60,20 @@ function App() {
      <div className="container mx-auto mt-5">
       <h2 className="text-2xl text-center sm:text-left mb-3">大家都在看</h2>
       <div className="flex flex-wrap md:flex-nowrap justify-center">
-         <TextBox text="代購"/>
+         <TextImage text="代購" textUrl="https://translate.google.com/"/>
+         <TextImage text="團購"/>
+         <TextImage text="優惠碼"/>
+         <TextImage text="其他"/>
+         <TextImage text="換匯"/>
+         <TextImage text="行李空間"/>
+      </div>
+     </div>
+     <div className="container mx-auto mt-5">
+      <h2 className="text-2xl text-center sm:text-left mb-3">我也想知道</h2>
+      <div className="flex flex-wrap md:flex-nowrap justify-center">
+         <TextBox text="代購" textUrl="https://translate.google.com/"/>
          <TextBox text="團購"/>
          <TextBox text="優惠碼"/>
-         <TextBox text="其他"/>
-         <TextBox text="換匯"/>
-         <TextBox text="行李空間"/>
       </div>
      </div>
      
