@@ -1,10 +1,34 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import "./styles/style.css"
 import { BsCupHot } from 'react-icons/bs';
 import { PiHamburgerThin } from "react-icons/pi";
+// import { query } from 'express';
 
 
 const Nav = () => {
+  useEffect(() => {
+    const hamburgerIcon = document.querySelector("#hamburger");
+    const menuChoice = document.querySelector("#menuChoice");
+
+    if (hamburgerIcon) {
+      hamburgerIcon.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log("click");
+        menuChoice.classList.add("text-green");
+
+        // 這裡可以添加更多處理邏輯
+      });
+    }
+    // 清除事件監聽器
+    return () => {
+      if (hamburgerIcon) {
+        hamburgerIcon.removeEventListener("click", () => {
+          console.log("click");
+        });
+      }
+    };
+  }, []);
+
   return (
     <nav className='nav'>
       <div class="bg-gray-100 font-sans w-full m-0">
@@ -17,15 +41,12 @@ const Nav = () => {
                 <h2 class="inline">Taiwanese in the UK</h2>
               </div>
 
-
-              {/* 在這裡要加一個 div 讓 hamburger 控制 toggle */}
-              {/* <div></div> */}
               {/* choices */}
               <div class="hidden sm:flex sm:items-center">
-                <a href="#" class="text-gray-800 text-sm font-semibold hover:text-teal-500 mr-4">Products</a>
-                <a href="#" class="text-gray-800 text-sm font-semibold hover:text-teal-500 mr-4">Marketplace</a>
-                <a href="#" class="text-gray-800 text-sm font-semibold hover:text-teal-500 mr-4">Partners</a>
-                <a href="#" class="text-gray-800 text-sm font-semibold hover:text-teal-500">Pricing</a>
+                <a href="#" class="text-gray-800 text-sm font-semibold hover:text-teal-500 mr-4">找房源</a>
+                <a href="#" class="text-gray-800 text-sm font-semibold hover:text-teal-500 mr-4">找二手物品</a>
+                <a href="#" class="text-gray-800 text-sm font-semibold hover:text-teal-500 mr-4">找旅伴</a>
+                <a href="#" class="text-gray-800 text-sm font-semibold hover:text-teal-500">聊聊天</a>
               </div>
 
               {/* sign in */}
@@ -35,13 +56,14 @@ const Nav = () => {
               </div>
 
               {/* hamburger icon */}
-              <div class="sm:hidden cursor-pointer">
+              <div class="sm:hidden cursor-pointer" id="hamburger">
                 <a href=""><PiHamburgerThin class="inline pr-2 pb-0.5" size={25} color="black" /></a>
               </div>
 
             </div>
             
-            <div class="block sm:hidden bg-white border-t-2 py-2">
+            <div class="block sm:hidden bg-pink text-blue border-t-2 py-2" id="menuChoice">
+              <p>test</p>
               <div class="flex flex-col">
                 <a href="#" class="text-gray-800 text-sm font-semibold hover:text-teal-500 mb-1">Products</a>
                 <a href="#" class="text-gray-800 text-sm font-semibold hover:text-teal-500 mb-1">Marketplace</a>
