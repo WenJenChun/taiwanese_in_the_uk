@@ -1,30 +1,43 @@
-import React, { useState } from 'react';
-import "./styles/style.css";
+import React, { useState, useRef, useEffect } from 'react';
+// import "./styles/style.css";
 import { BsCupHot } from 'react-icons/bs';
 import { PiHamburgerThin } from "react-icons/pi";
-import { useRef } from 'react';
 import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-
-
 
 const Nav = () => {
   const [isPhoneMenuVisible, setPhoneMenuVisible] = useState(false);
+  const phoneMenuRef = useRef(null);
+
   const togglePhoneMenu = () => {
     setPhoneMenuVisible(!isPhoneMenuVisible);
+    if (!isPhoneMenuVisible) {
+      gsap.to(phoneMenuRef.current, {
+        duration: 0.5,
+        height: 'auto',
+        opacity: 1,
+        ease: 'power2.inOut',
+        onComplete: () => {
+          phoneMenuRef.current.style.height = 'auto'; // ensure the height is auto after animation
+        },
+      });
+    } else {
+      gsap.to(phoneMenuRef.current, {
+        duration: 0.5,
+        height: 0,
+        opacity: 0,
+        ease: 'power2.inOut',
+        onComplete: () => {
+          phoneMenuRef.current.style.height = 0; // ensure the height is 0 after animation
+        },
+      });
+    }
   };
 
-//   gsap.registerPlugin(useGSAP);
-
-// const container = useRef();
-
-// useGSAP(
-//     () => {
-//         // gsap code here...
-//         gsap.to('.box', { x: 360 }); // <-- automatically reverted
-//     },
-//     { scope: container }
-// );
+  useEffect(() => {
+    if (!isPhoneMenuVisible) {
+      gsap.set(phoneMenuRef.current, { height: 0, opacity: 0 });
+    }
+  }, [isPhoneMenuVisible]);
 
   return (
     <nav className='nav'>
@@ -36,7 +49,6 @@ const Nav = () => {
               <div>
                 <BsCupHot className="inline pr-2 pb-0.5" size={25} color="black" />
                 <h2 className="inline">Taiwanese in the UK</h2>
-                
               </div>
 
               {/* choices */}
@@ -62,20 +74,23 @@ const Nav = () => {
             </div>
 
             {/* phone menu */}
-            {isPhoneMenuVisible && (
-              <div className="block sm:hidden bg-pink text-blue border-t-2 py-2" id="phoneMenuChoice">
-                <div className="flex flex-col">
-                  <a href="#" className="text-gray-800 text-sm font-semibold hover:text-teal-500 mb-1">Products</a>
-                  <a href="#" className="text-gray-800 text-sm font-semibold hover:text-teal-500 mb-1">Marketplace</a>
-                  <a href="#" className="text-gray-800 text-sm font-semibold hover:text-teal-500 mb-1">Partners</a>
-                  <a href="#" className="text-gray-800 text-sm font-semibold hover:text-teal-500 mb-1">Pricing</a>
-                  <div className="flex justify-between items-center border-t-2 pt-2">
-                    <a href="#" className="text-gray-800 text-sm font-semibold hover:text-teal-500 mr-4">Sign in</a>
-                    <a href="#" className="text-gray-800 text-sm font-semibold border px-4 py-1 rounded-lg hover:text-teal-600 hover:border-teal-600">Sign up</a>
-                  </div>
+            <div
+              ref={phoneMenuRef}
+              className="overflow-hidden sm:hidden border-t-2"
+              id="phoneMenuChoice"
+              style={{ height: 0, opacity: 0 }}
+            >
+              <div className="flex flex-col">
+                <a href="#" className="mt-1 text-gray-800 text-sm font-semibold hover:text-teal-500 mb-1">Products</a>
+                <a href="#" className="text-gray-800 text-sm font-semibold hover:text-teal-500 mb-1">Marketplace</a>
+                <a href="#" className="text-gray-800 text-sm font-semibold hover:text-teal-500 mb-1">Partners</a>
+                <a href="#" className="text-gray-800 text-sm font-semibold hover:text-teal-500 mb-1">Pricing</a>
+                <div className="flex justify-between items-center border-t-2 pt-2">
+                  <a href="#" className="text-gray-800 text-sm font-semibold mb-2 hover:text-teal-500 mr-4">Sign in</a>
+                  <a href="#" className="text-gray-800 text-sm font-semibold border px-4 py-1 mb-2 rounded-lg hover:text-teal-600 hover:border-teal-600">Sign up</a>
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
