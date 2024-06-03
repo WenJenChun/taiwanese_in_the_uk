@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-// import "./styles/style.css";
 import { BsCupHot } from 'react-icons/bs';
 import { PiHamburgerThin } from "react-icons/pi";
 import gsap from 'gsap';
@@ -9,29 +8,43 @@ const Nav = () => {
   const phoneMenuRef = useRef(null);
 
   const togglePhoneMenu = () => {
-    setPhoneMenuVisible(!isPhoneMenuVisible);
+    //點擊 hamburgerIcon 後，判斷如果 isPhoneMenuVisible 為 true 時
     if (!isPhoneMenuVisible) {
-      gsap.to(phoneMenuRef.current, {
-        duration: 0.5,
-        height: 'auto',
-        opacity: 1,
-        ease: 'power2.inOut',
-        onComplete: () => {
-          phoneMenuRef.current.style.height = 'auto'; // ensure the height is auto after animation
-        },
-      });
+      gsap.set(phoneMenuRef.current, { height: 'auto' }); //height: 'auto'以獲取實際高度
+      const fullHeight = phoneMenuRef.current.scrollHeight + 'px';
+      //ease in
+      gsap.fromTo(
+        phoneMenuRef.current,
+        { height: 0, opacity: 0 },
+        {
+          duration: 0.5,
+          height: fullHeight,
+          opacity: 1,
+          ease: 'power2.inOut',
+          onComplete: () => {
+            phoneMenuRef.current.style.height = 'auto'; // 確保展開後高度為正常所以設 auto
+          },
+        }
+      );
     } else {
-      gsap.to(phoneMenuRef.current, {
-        duration: 0.5,
-        height: 0,
-        opacity: 0,
-        ease: 'power2.inOut',
-        onComplete: () => {
-          phoneMenuRef.current.style.height = 0; // ensure the height is 0 after animation
-        },
-      });
+      // 收合
+      gsap.fromTo(
+        phoneMenuRef.current,
+        { height: phoneMenuRef.current.scrollHeight + 'px', opacity: 1 },
+        {
+          duration: 0.5,
+          height: 0,
+          opacity: 0,
+          ease: 'power2.inOut',
+          onComplete: () => {
+            phoneMenuRef.current.style.height = 0; // 確保完成後高度為0
+          },
+        }
+      );
     }
+    setPhoneMenuVisible(!isPhoneMenuVisible); // 更改狀態
   };
+  
 
   useEffect(() => {
     if (!isPhoneMenuVisible) {

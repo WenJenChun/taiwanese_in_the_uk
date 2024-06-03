@@ -56,10 +56,10 @@ const Banner = ({ src }) => {
               <p className="mb-4 text-black text-2xl">Other Cities</p>
     
               <div className='flex justify-between p-3 space-x-4'>
-                <a href="" className='border-solid border rounded-sm border-grey  text-base font-normal px-3.5 py-0.5 hover:bg-rose-500'>England</a>
-                <a href="" className='border-solid border rounded-sm border-grey text-base font-normal px-3.5 py-0.5 hover:bg-rose-500'>Scotland</a>
-                <a href="" className='border-solid border rounded-sm border-grey text-base font-normal px-3.5 py-0.5 hover:bg-rose-500'>Walse</a>
-                <a href="" className='border-solid border rounded-sm border-grey text-base font-normal px-3.5 py-0.5 hover:bg-rose-500'>North Ireland</a>
+                <a href="" className='border-solid border rounded-sm border-grey  text-base font-normal px-3.5 py-0.5 hover:bg-rose-500'>Sheffield</a>
+                <a href="" className='border-solid border rounded-sm border-grey text-base font-normal px-3.5 py-0.5 hover:bg-rose-500'>Leeds</a>
+                <a href="" className='border-solid border rounded-sm border-grey text-base font-normal px-3.5 py-0.5 hover:bg-rose-500'>Edinburgh</a>
+                <a href="" className='border-solid border rounded-sm border-grey text-base font-normal px-3.5 py-0.5 hover:bg-rose-500'>Belfast</a>
               </div>
             </div>
           </div>

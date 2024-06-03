@@ -70,9 +70,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ----------
 
-問題：
-首頁的區塊何時該寫獨立的 components?
-
-待處理：
-Room 的 RWD
+地點的選擇 Other City 點開後顯示其他城市名
+未來再改成選 contry > city
 
