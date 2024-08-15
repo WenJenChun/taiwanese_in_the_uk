@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/WenJenChun/taiwanese_in_the_uk/static/css/main.ca63cf11.css",
-    "main.js": "/WenJenChun/taiwanese_in_the_uk/static/js/main.646bdc20.js",
-    "index.html": "/WenJenChun/taiwanese_in_the_uk/index.html",
-    "main.ca63cf11.css.map": "/WenJenChun/taiwanese_in_the_uk/static/css/main.ca63cf11.css.map",
-    "main.646bdc20.js.map": "/WenJenChun/taiwanese_in_the_uk/static/js/main.646bdc20.js.map"
+    "main.css": "/taiwanese_in_the_uk/static/css/main.ca63cf11.css",
+    "main.js": "/taiwanese_in_the_uk/static/js/main.7cc80103.js",
+    "index.html": "/taiwanese_in_the_uk/index.html",
+    "main.ca63cf11.css.map": "/taiwanese_in_the_uk/static/css/main.ca63cf11.css.map",
+    "main.7cc80103.js.map": "/taiwanese_in_the_uk/static/js/main.7cc80103.js.map"
   },
   "entrypoints": [
     "static/css/main.ca63cf11.css",
-    "static/js/main.646bdc20.js"
+    "static/js/main.7cc80103.js"
   ]
 }
