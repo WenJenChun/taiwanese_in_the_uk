@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WenJenChun/taiwanese_in_the_uk/static/css/main.ca63cf11.css",
+    "main.js": "/WenJenChun/taiwanese_in_the_uk/static/js/main.646bdc20.js",
+    "index.html": "/WenJenChun/taiwanese_in_the_uk/index.html",
+    "main.ca63cf11.css.map": "/WenJenChun/taiwanese_in_the_uk/static/css/main.ca63cf11.css.map",
+    "main.646bdc20.js.map": "/WenJenChun/taiwanese_in_the_uk/static/js/main.646bdc20.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca63cf11.css",
+    "static/js/main.646bdc20.js"
+  ]
+}
